@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "AWS Account Header",
+  "version": "1.0",
+  "description": "Change the color of AWS Header based on account id",
+  "icons": {
+    "48": "icons/48.png",
+    "96": "icons/96.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://console.aws.amazon.com/*"],
+      "js": ["aws.js"]
+    }
+  ],
+  "permissions": ["storage"],
+  "options_ui": {
+    "page": "options.html"
+  },
+  "applications": {
+    "gecko": {
+      "id": "aws-account-header@acst.com"
+    }
+  }
+}

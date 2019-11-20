@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      ul li {
+        cursor: pointer;
+        position: relative;
+        padding: 12px, 8px, 12px, 40px;
+        background: #eee;
+        transition: 0.2s;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      ul li:nth-child(odd) {
+        background: #f9f9f9;
+      }
+      ul li:hover {
+        background: #ddd;
+      }
+      .close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 12px, 16px, 12px, 16px;
+      }
+      .close:hover {
+        background-color: #f44336;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label>Account</label>
+      <input type="text" id="account" />
+      <label>Color</label>
+      <input type="color" id="color" />
+      <button type="submit">Add Account</button>
+    </form>
+    <ul id="accounts"></ul>
+    <script src="options.js"></script>
+  </body>
+</html>
